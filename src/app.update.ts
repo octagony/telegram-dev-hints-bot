@@ -12,7 +12,9 @@ export class AppUpdate {
 
   @Start()
   async startCommand(ctx: Context): Promise<void> {
-    await ctx.reply('Hi friend');
-    await ctx.reply('What you wanna do?', actionButtons());
+    await ctx.replyWithHTML(
+      '<b>👋 Hi friend</b>. This bot gives cheat sheets on popular web technologies. You can both view them on Telegram and download a<b> 📝 PDF-file</b> for yourself',
+    );
+    await ctx.replyWithHTML('😉 Can i give you a hint?', actionButtons());
   }
 }
